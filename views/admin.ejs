@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+</head>
+<body>
+  <h1>Admin Panel</h1>
+  <div>
+    <% if (files.length === 0) { %>
+      <p>No images uploaded yet.</p>
+    <% } else { %>
+      <% files.forEach(file => { %>
+        <div style="margin-bottom: 20px;">
+          <img src="/<%= file %>" alt="<%= file %>" style="max-width: 300px; display: block;">
+          <p><%= file %></p>
+        </div>
+      <% }) %>
+    <% } %>
+  </div>
+</body>
+</html>
